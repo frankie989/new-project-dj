@@ -1,0 +1,39 @@
+@import "../../styles/mixins.pcss";
+
+.header {
+    display: flex;
+    align-items: center;
+    &__callback {
+        margin-right: 30px;
+    }
+    &__logo {
+        margin: 20px 0 20px 40px;
+    }
+    &__menu {
+        margin-left: 80px;
+        margin-right: 488px;
+        &-list {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+
+        }
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 40px;
+        }
+        &-link {
+            white-space: nowrap;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: var(--base-font-family);
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: var(--base-line-height);
+            color: var(--c-dark);
+        }
+    }
+}
+

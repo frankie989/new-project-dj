@@ -1,0 +1,61 @@
+<%
+const cfg = { ...require("./data.json"), ...arguments?.[0] }
+const {
+	extraClasses,
+	extraAttrs
+} = cfg
+%>
+
+<%
+const classes = `header ${extraClasses.join(" ")}`.trim()
+const attrs = extraAttrs.join(" ")
+%>
+
+<header
+	class="<%= classes %>"
+	<%- extraAttrs %>
+>
+
+
+	<div class="header__logo">
+		<%- require("../logo/template.ejs") ({
+			extraClasses: [
+					"header__logo"
+			]
+		})%>
+	</div>
+	<nav class="header__menu">
+		<ul class="header__menu-list">
+			<li class="header__menu-item"><a href="#hero" class="header__menu-link">О компании</a></li>
+			<li class="header__menu-item"><a href="/" class="header__menu-link">Продукция</a></li>
+			<li class="header__menu-item"><a href="/" class="header__menu-link">Исследования</a></li>
+			<li class="header__menu-item"><a href="/" class="header__menu-link">События</a></li>
+			<li class="header__menu-item"><a href="/" class="header__menu-link">Контакты</a></li>
+		</ul>
+	</nav>
+
+	<div class="header__callback">
+		<%- require("../button/template.ejs") ({
+			label: "Обратная связь"
+		}) %>
+	</div>
+
+	<div class="header__languages">
+		<%- require("../dropdown/template.ejs") ({
+
+		})%>
+	</div>
+
+	<div class="header__search">
+		<div class="quick-search">
+			<%- require("../button/template.ejs")({
+				extraClasses: [
+						"button--transparent"
+				],
+				icon: "search",
+				labelIsHidden: true
+			})%>
+		</div>
+	</div>
+
+</header>

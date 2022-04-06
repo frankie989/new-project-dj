@@ -1,0 +1,48 @@
+@import "../../styles/mixins.pcss";
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    position: relative;
+    border-left: 1px solid var(--c-dark);
+    border-right: 1px solid var(--c-dark);
+    text-transform: uppercase;
+
+    &__current-version {
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 33px;
+        cursor: pointer;
+        user-select: none;
+    }
+    &__link {
+        padding: 0 20px;
+        color: var(--c-dark);
+        text-decoration: none;
+        transition: color .3s;
+    }
+
+    &__icon {
+        margin-left: 8.54px;
+    }
+
+    &__menu {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        background-color: var(--c-light);
+        box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
+        transition: 0.3s;
+        @mixin hide;
+    }
+}
+
+.dropdown:hover .dropdown__menu {
+    @mixin show;
+}

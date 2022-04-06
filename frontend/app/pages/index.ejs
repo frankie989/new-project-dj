@@ -1,0 +1,28 @@
+<% const data = {
+  title: 'Главная страница'
+} %>
+
+<%- require("../layouts/head.ejs")(data) %>
+
+
+<%- require("../layouts/hero.ejs")() %>
+<%- require("../layouts/geography.ejs")() %>
+<%- require("../layouts/foot.ejs")() %>
+
+
+<section class="section">
+
+  <div>
+    Обычная кнопка
+    <% const params = {
+      src:'#modal-feedback',
+    } %>
+    <%- require("../components/button/template.ejs")({
+      extraAttrs:[
+        `data-js-modals-open-button=${JSON.stringify(params)}`
+      ],
+      label: "Открыть фотму обратной связи"
+    }) %>
+  </div>
+
+</section>
