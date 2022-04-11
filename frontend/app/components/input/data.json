@@ -1,4 +1,11 @@
 {
   "extraClasses": [],
-  "extraAttrs": []
+  "extraAttrs": [],
+  "type": "text",
+  "placeholder": "",
+  "name": "",
+  "alt": "",
+  "id": "",
+  "autocomplete": "off",
+  "value": ""
 }

@@ -4,8 +4,8 @@ import '@fancyapps/ui/dist/fancybox.css'
 
 export const els = {
     modal: '[data-js-modal]',
-    openButton: '[data-js-modal-open-button]',
-    closeButton: '[data-js-modal-close-button]'
+    openButton: '[data-js-modals-open-button]',
+    closeButton: '[data-js-modals-close-button]'
 }
 
 export default class Modals {

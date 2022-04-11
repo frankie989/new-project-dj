@@ -9,12 +9,45 @@
         </div>
     </header>
     <div class="modal__body">
-        Form
+        <p class="modal__body__appeal">Оставьте Ваши данные, наш специалист свяжется с Вами в ближайшее время.</p>
+        <form action="#" class="modal__body__form" id="form1">
+            <%- require("../components/input/template.ejs")({
+                extraClasses: [
+                    "modal__body__form__input"
+                ],
+                type: "text",
+                name: "name",
+                id: "name",
+                placeholder: "Ф.И.О",
+                alt: "name"
+            })%>
+            <%- require("../components/input/template.ejs")({
+                extraClasses: [
+                    "modal__body__form__input"
+                ],
+                type: "tel",
+                name: "phone",
+                id: "phone",
+                placeholder: "ТЕЛЕФОН",
+                alt: "phone"
+            })%>
+            <%- require("../components/input/template.ejs")({
+                extraClasses: [
+                    "modal__body__form__input"
+                ],
+                type: "email",
+                name: "email",
+                id: "email",
+                placeholder: "ЭЛЕКТРОННАЯ ПОЧТА",
+                alt: "email"
+            })%>
+        </form>
+
     </div>
     <footer class="modal__actions">
         <%- require("../components/button/template.ejs")({
             extraAttrs: [
-                'data-js-modal-close-button'
+                'data-js-modals-close-button'
             ],
             label: "Отменить"
         }) %>
